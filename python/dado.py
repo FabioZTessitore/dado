@@ -1,6 +1,6 @@
 # dado.py
 
-# lancia un dado a N facce
+# lancia un dado a N facce (N > 1)
 
 import random
 

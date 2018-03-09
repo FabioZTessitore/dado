@@ -1,6 +1,6 @@
-/* rand.c */
+/* dado.c */
 
-/* lancia un dado a N facce */
+/* lancia un dado a N facce (N > 1) */
 
 /* compilazione ed esecuzione:
  *
@@ -23,7 +23,7 @@ int main()
   do {
     printf("N = ");
     scanf("%d", &N);
-  } while (N <= 0);
+  } while (N <= 1);
   
   printf("Estraggo ... %d\n\n", 1 + rand() % N);
 
