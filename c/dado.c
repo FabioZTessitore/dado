@@ -1,31 +1,13 @@
 /* dado.c */
 
-/* lancia un dado a N facce (N > 1) */
+#include "random.h"
 
-/* compilazione ed esecuzione:
- *
- * $ make dado
- * $ ./dado
- */
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main()
+void dado_init()
 {
-  int N = 0;
+  random_init();
+}
 
-  /* inizializza generatore numeri pseudocasuali */
-  srand( time(NULL) );
-
-  printf("Lancia un dado a N facce\n");
-  do {
-    printf("N = ");
-    scanf("%d", &N);
-  } while (N <= 1);
-  
-  printf("Estraggo ... %d\n\n", 1 + rand() % N);
-
-  return 0;
+int dado_lancia(int N)
+{
+  return random_between(1, N+1);
 }
